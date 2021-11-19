@@ -9,6 +9,16 @@ Engine::Engine(int num1,int num2,int num3,int num4):temp(num1),pressure(num2),fG
     fuel=100;
 }*/
 
+void Engine::On()
+{
+    on=true;
+}
+
+void Engine::Off()
+{
+    on=false;
+}
+
 Engine::~Engine()
 {
 }

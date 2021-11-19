@@ -16,10 +16,8 @@ protected:
     bool status;
 public:
     Engine(int,int,int,int);
-    //EngineMemento* createMemento();
-    //virtual void retrieveMemento(EngineMemento*)=0;
-    //virtual void On();
-    //virtual void Off();
+    void On();
+    void Off();
     //virtual bool staticFire()=0;
     //virtual void refill();
     friend class Rocket;
