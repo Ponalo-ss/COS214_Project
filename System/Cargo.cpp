@@ -3,20 +3,27 @@
 #include <string>
 #include <cstring>
 
-Cargo:Cargo(int capacity)
+Cargo:Cargo(int capacity):Load(capacity)
 {
-	this->capacity = capacity;
+	
 }
 
 bool Cargo:receive()
 {
-	return received;
-	
+	return this->received;
 }
 
 bool Cargo:test()
 {
-	this->testCapacity();
+	cout<<"Cargo loaded onto Spacecraft"<<endl;
+	int max = 10000;
+	if(loadCapacity <= max)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 }
 
 Cargo:~Cargo()
