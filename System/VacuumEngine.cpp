@@ -50,6 +50,8 @@ bool VacuumEngine::testEngine()
     else
     {
         cout<<"Please switch Engine on"<<endl;
+        status=false;
+        return false;
     }
 }
 
