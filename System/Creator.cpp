@@ -5,6 +5,8 @@
 #include "CrewDragonCreator.h"
 #include "DragonSpacecraftCreator.h"
 
+using namespace std;
+
 SpaceCraft* Creator::create(Context* l,string s) 
 {
     cout<<"Preparing spacecraft...."<<endl;

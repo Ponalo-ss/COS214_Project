@@ -2,6 +2,8 @@
 #define CrewDragon_H
 #include "SpaceCraft.h"
 
+using namespace std;
+
 class CrewDragon :public SpaceCraft
 {
 public:

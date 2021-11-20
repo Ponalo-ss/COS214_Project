@@ -2,6 +2,8 @@
 #define DragonSpaceCraft_H
 #include "SpaceCraft.h"
 
+using namespace std;
+
 class DragonSpaceCraft :public SpaceCraft
 {
 public:
