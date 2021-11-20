@@ -48,6 +48,8 @@ bool MerlinEngine::testEngine()
     else
     {
         cout<<"Engine is not on"<<endl;
+        status=false;
+        return false;
     }
 }
 
