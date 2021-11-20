@@ -19,6 +19,17 @@ void Engine::Off()
     on=false;
 }
 
+EngineMemento *Engine::createMemento()
+{
+    return new EngineMemento(fuel,temp);
+}
+
+void Engine::retrieveMemento(EngineMemento* engi)
+{
+    this->fuel=engi->getFuel();
+    this->temp=engi->getTemp();
+}
+
 Engine::~Engine()
 {
 }
