@@ -3,6 +3,8 @@
 #include "SpaceCraft.h"
 #include "Creator.h"
 
+using namespace std;
+
 class CrewDragonCreator: public Creator
 {
     protected:
