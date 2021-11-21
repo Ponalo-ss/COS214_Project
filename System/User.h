@@ -3,8 +3,9 @@
 #include<string>
 #include<vector>
 #include "Satellite.h"
+#include "Mediator.h"
 
-class User
+class User: public Mediator
 {
 private:
     /* data */
