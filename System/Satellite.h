@@ -21,7 +21,10 @@ public:
     virtual void registerSatellite(User*)=0;
     virtual bool testDistance();
     void statusChange();
-    void setDistanceToOrbit(double dis);
+    void setDistanceToOrbit(double dis); //new
+    void Communicate(); //communication between satellites
+    string sendSignal(); //new -communicstion between user and satellite
+    void setStatus(string s); //new
     ~Satellite();
 };
 
@@ -65,8 +68,39 @@ bool Satellite::testDistance()
 
 }
 
-void Setallite::statusChange()
+void Satellite::statusChange()
 {
+    //Communicating to user
+    
+    /*assuming states will be:
+    -on earth
+]   -on orbit
+    -spreaded out 
+    -in Position
+
+    as well as communicating to user respectively
+       */
+    
+    if(status=="on Earth" && distance==distanceToOrbit)
+    {
+        setStatus("on orbit");
+    }
+    else{
+        cout<<"Could not change the state because the Falcon haven't reached the orbit"<<endl;
+    }
+    
+    if(status== "on orbit")
+    {
+        setStatus("spreaded out");
+    }
+    else if(status =="spreaded out")
+    {
+        setStatus("in Position")
+    }
+    else if(status== "in Position")
+    {
+        cout<<"Satellite already in Position."
+    }
     
 }
 #endif
