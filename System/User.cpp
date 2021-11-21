@@ -44,7 +44,7 @@ void User::detach(Satellite* sat)
 
         while ((it != satellites.end()) && (!found)) {
             
-            if ( *it == engineer) {
+            if ( *it == sat) {
                 found = true;
                 satellites.erase(it);
             }
