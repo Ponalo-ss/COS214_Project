@@ -57,5 +57,6 @@ void User::detach(Satellite* sat)
 
 void User::notify()
 {
+    //sendSignal() and receive signal
 
 }
