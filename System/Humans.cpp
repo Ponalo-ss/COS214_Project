@@ -3,19 +3,27 @@
 #include <string>
 #include <cstring>
 
-Humans:Humans(int capacity)
+Humans:Humans(int capacity):Load(capacity)
 {
-	this->capacity = capacity;
+	
 }
 
 bool Humans:receive()
 {
-	return received;
+	return this->received;
 }
 
 bool Humans:test()
 {
-	this->testCapacity();
+	cout<<"Crew loaded onto Spacecraft"<<endl;
+	int max = 10000;
+	if(loadCapacity <= max)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 }
 
 Humans:~Humans()

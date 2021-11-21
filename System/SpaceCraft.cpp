@@ -5,6 +5,8 @@
 #include "CrewDragon.h"
 #include "DragonSpaceCraft.h"
 
+using namespace std;
+
 SpaceCraft::SpaceCraft(Context* l,string s)
 {
     this->load = l;

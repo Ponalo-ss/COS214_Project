@@ -6,11 +6,12 @@
 Load:Load(int loadCapacity)
 {
 	this->loadCapacity = loadCapacity;
+	this->received = false;
 }
 
 void Load:setReceipt(bool b)
 {
-	this->b = received;
+	this->received = b;
 }
 
 void Load:receive()

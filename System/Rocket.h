@@ -4,7 +4,9 @@
 #include<string>
 #include<vector>
 #include<iostream>
-//#include "LaunchSimulator.h"
+#include "TurnOff.h"
+#include "TurnOn.h"
+
 using namespace std;
 
 class LaunchSimulator;

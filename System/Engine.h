@@ -1,5 +1,7 @@
 #ifndef Engine_H
 #define Engine_H
+#include "EngineMemento.h"
+#include "EngineStore.h"
 #include <string>
 #include<iostream>
 
@@ -16,12 +18,12 @@ protected:
     bool status;
 public:
     Engine(int,int,int,int);
-    //EngineMemento* createMemento();
-    //virtual void retrieveMemento(EngineMemento*)=0;
-    //virtual void On();
-    //virtual void Off();
+    void On();
+    void Off();
     //virtual bool staticFire()=0;
     //virtual void refill();
+    EngineMemento *createMemento();
+    void retrieveMemento(EngineMemento *mem);
     friend class Rocket;
     virtual bool testEngine()=0; //Strategy design pattern
     //string getType();

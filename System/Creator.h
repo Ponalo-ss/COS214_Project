@@ -2,6 +2,8 @@
 #define Creator_H
 #include "SpaceCraft.h"
 
+using namespace std;
+
 class Creator
 {
 public:

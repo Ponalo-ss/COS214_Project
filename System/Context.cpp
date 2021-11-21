@@ -5,34 +5,30 @@
 
 Context:Context(Load* l)
 {
-	this->l = l;
+	this->strategy = l;
 	
 }
 
 void Context:setReceipt(bool b)
 {
-	this->b = received;
+	strategy->setReceipt(b);
 }
 
 bool Context:loadReceipt()
 {
-	return received;
+	return strategy->receive();
 	
 }
 
 bool Context:testCapacity()
 {
-	if(loadCapacity>0)
-		{
-			return true
-		}
-	else
-		return false;
+	return strategy->test();
 }
 
 
 Context:~Context()
 {
-	cout<<"Context Destroyed"<<endl;
+	delete strategy;
+	strategy=0;
 }
 

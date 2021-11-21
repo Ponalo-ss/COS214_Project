@@ -4,6 +4,8 @@
 #include "Creator.h"
 #include<string>
 
+using namespace std;
+
 class SpaceCraft
 {
 public:
