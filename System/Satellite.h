@@ -24,7 +24,7 @@ public:
     void setDistanceToOrbit(double dis); //new
     void Communicate(); //communication between satellites
     string sendSignal(); //new -communicstion between user and satellite
-    void setStatus(string s); //new
+    void setStatus(string s){status= s;} //new
     ~Satellite();
 };
 
@@ -50,6 +50,8 @@ bool Satellite::testDistance()
     {
         cout<<"Orbits reached"<<endl;
         cout<<"Satellites will slowly spread out equally to cover a large area"<<endl;
+
+        //calculation to get the area that each satellite will occupy
     
     }
     else{
@@ -95,11 +97,11 @@ void Satellite::statusChange()
     }
     else if(status =="spreaded out")
     {
-        setStatus("in Position")
+        setStatus("in Position");
     }
     else if(status== "in Position")
     {
-        cout<<"Satellite already in Position."
+        cout<<"Satellite already in Position."<<endl;
     }
     
 }
