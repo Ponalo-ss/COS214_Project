@@ -24,6 +24,9 @@ bool Rocket::stage1Test()
     vector<Engine*>::iterator it;
     for(it=MerlinEngines.begin();it!=MerlinEngines.end();it++)
     {
+        //Turning the engine on
+        TurnOn* TO=new TurnOn(*it);
+        TO->execute();
         if((*it)->testEngine())
         {
             cout<<"Merlin Engine "<<index++<<" is fully functional"<<endl;
@@ -33,6 +36,7 @@ bool Rocket::stage1Test()
             cout<<"Merlin engine "<<index++<<" is faulty and needs to be repaired or replaced"<<endl;
             return false;
         }
+        TO->undo();
     }
     return true;
 }
@@ -46,12 +50,15 @@ bool Rocket::stage2Test()
     vector<Engine*>::iterator it;
     for(it=VacuumEngines.begin();it!=VacuumEngines.end();it++)
     {
+        TurnOn* TO=new TurnOn(*it);
+        TO->execute();
         if((*it)->testEngine())
         {
             cout<<"Vacuum Engine "<<index++<<" is fully functional"<<endl;
         }
         else
         {
+            TO->undo();
             cout<<"Vacuum engine "<<index++<<" is faulty and needs to be repaired or replaced"<<endl;
             return false;
         }
